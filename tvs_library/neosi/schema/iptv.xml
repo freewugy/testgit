@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<iptv>
-	<transponder provider="LGU" ip_addr="233.18.145.128" port_no="5040"/>
-	<transponder provider="SKB" ip_addr="239.192.60.3" port_no="49200"/>
-	<transponder provider="ETC" ip_addr="239.192.60.3" port_no="49200"/>
-	<transponder provider="LINKNET" ip_addr="234.0.0.1" port_no="1234"/>
-</iptv>

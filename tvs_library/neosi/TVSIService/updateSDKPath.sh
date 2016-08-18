@@ -1,1 +1,0 @@
-android update project -p .

@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Table name="TDT">
-	<elm name="table_id" length="8" />
-	<elm name="section_syntax_indicator" length="1" />
-	<elm name="reserved" length="3" />
-	<elm name="section_length" length="12" />
-	<elm name="UTC_time_MJD" length="16" />
-	<elm name="UTC_time" length="24" />
-</Table>
