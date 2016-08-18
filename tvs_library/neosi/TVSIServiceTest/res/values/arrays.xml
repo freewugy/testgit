@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array_scanmode">
+        <item>POSTEL_AUTO</item>
+        <item>POSTEL_MANUAL</item>
+        <item>LGEQA_AUTO</item>
+        <item>LGEQA_MANUAL</item>
+        <item>MANUAL_CHANNEL</item>
+        <item>CHANNEL</item>
+    </string-array>
+    <string-array name="array_badnwidth">
+        <item>6MHz</item>
+        <item>7MHz</item>
+        <item>8MHz</item>
+    </string-array>
+    <string-array name="array_modulation">
+        <item>16QAM</item>
+        <item>32QAM</item>
+        <item>64QAM</item>
+        <item>128QAM</item>
+        <item>256QAM</item>
+    </string-array>
+    <string-array name="array_tunerid">
+        <item>Tuner#1</item>
+        <item>Tuner#2</item>
+    </string-array>
+
+</resources>

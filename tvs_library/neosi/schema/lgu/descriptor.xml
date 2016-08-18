@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<descriptors>
+<descriptor name="ip_delivery_descriptor" value="0x80">
+    <elm name="IP_address" length="32" />
+    <elm name="TS_port_number" length="16" />
+</descriptor>
+
+<descriptor name="logical_channel_number_descriptor" value="0x83">
+    <elm name="channel_number" length="16" />
+</descriptor>
+
+<descriptor name="channel_genre_descriptor" value="0x84">
+    <elm name="genre_code" length="8" />
+    <elm name="category_code" length="8" />
+</descriptor>
+
+<descriptor name="local_area_descriptor" value="0x85">
+	<elm name="local_area_code" length="8" />
+</descriptor>
+
+<descriptor name="element_stream_descriptor" value="0x86">
+    <elm name="reserved" length="3" />
+    <elm name="PCR_PID" length="13" />
+    <elm name="resolution" length="8" />
+    <elm name="element_stream_count" length="8" />
+    <entry name="element_stream_info"  length="element_stream_count" >
+    	<elm name="stream_type" length="8" />
+    	<elm name="reserved" length="3" />
+    	<elm name="elementary_PID" length="13" />
+    	<elm name="ISO_639_language_code" length="24" />
+    </entry>
+</descriptor>
+
+<descriptor name="extended_service_descriptor" value="0x90">
+	<elm name="descriptor_number" length="4" />
+	<elm name="last_descriptor_number" length="4" />
+	<elm name="ISO_639_language_code" length="24" />
+	<elm name="length_of_item" length="8" />
+	<entry name="item_info"  length="length_of_item" >
+		<elm name="item_description_length" length="8" />
+		<entry name="item_description"  length="item_description_length" >
+			<elm name="item_description_char" length="8" />
+		</entry>
+		<elm name="item_length" length="8" />
+		<entry name="item"  length="item_length" >
+			<elm name="item_char" length="8" />
+		</entry>
+	</entry>
+	<elm name="text_length" length="8" />
+	<entry name="text_name"  length="text_length" >
+		<elm name="text_name_char" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="extended_network_descriptor" value="0x92">
+	<elm name="descriptor_number" length="4" />
+	<elm name="last_descriptor_number" length="4" />
+	<elm name="ISO_639_language_code" length="24" />
+	<elm name="length_of_item" length="8" />
+	<entry name="item_info"  length="length_of_item" >
+		<elm name="item_description_length" length="8" />
+		<entry name="item_description"  length="item_description_length" >
+			<elm name="item_description_char" length="8" />
+		</entry>
+		<elm name="item_length" length="8" />
+		<entry name="item"  length="item_length" >
+			<elm name="item_char" length="8" />
+		</entry>
+	</entry>
+	<elm name="text_length" length="8" />
+	<entry name="text_name"  length="text_length" ">
+		<elm name="text_name_char" length="8" />
+	</entry>
+</descriptor>
+
+</descriptors>

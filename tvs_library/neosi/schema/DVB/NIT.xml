@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Table name="NIT">
+<!--
+	<elm name="__table_id" length="8" />
+	<elm name="__section_syntax_indicator" length="1" />
+	<elm name="__reserved_future_use" length="1" />
+	<elm name="__reserved" length="2" />
+	<elm name="__section_length" length="12" />
+-->
+	<elm name="__skip" length="24" />
+	<elm name="network_id" length="16" />
+<!--
+	<elm name="__reserved" length="2" />
+	<elm name="__version_number" length="5" />
+	<elm name="__current_next_indicator" length="1" />
+	<elm name="__section_number" length="8" />
+	<elm name="__last_section_number" length="8" />
+-->
+	<elm name="__skip" length="24" />
+	<elm name="__reserved_future_use" length="4" />
+	<elm name="network_descriptors_length" length="12" />
+	<descriptors name="descriptor" length="network_descriptors_length">
+	</descriptors>
+	<elm name="__reserved_future_use" length="4"/>
+	<elm name="transport_stream_loop_length" length="12" />
+	<entry name="NITEntry" length="transport_stream_loop_length">
+		<elm name="transport_stream_id" length="16" />
+		<elm name="original_network_id" length="16" />
+		<elm name="__reserved_future_use" length="4" />
+		<elm name="transport_descriptors_length" length="12" />
+		<descriptors name="descriptor" length="transport_descriptors_length">
+		</descriptors>
+	</entry>
+</Table>

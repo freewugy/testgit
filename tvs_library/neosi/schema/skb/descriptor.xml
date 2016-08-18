@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<descriptors>
+<descriptor name="ip_delivery_descriptor" value="0x80">
+    <elm name="IP_address" length="32"  />
+    <elm name="TS_port_number" length="16"  />
+</descriptor>
+
+<descriptor name="logical_channel_number_descriptor" value="0x83">
+    <elm name="channel_number" length="16"  />
+</descriptor>
+
+<descriptor name="channel_genre_descriptor" value="0x84">
+    <elm name="genre_code" length="8"  />
+    <elm name="category_code" length="8"  />
+</descriptor>
+
+<descriptor name="local_area_descriptor" value="0x85">
+	<elm name="local_area_code" length="8"  />
+</descriptor>
+<descriptor name="element_stream_descriptor" value="0x86">
+    <elm name="__reserved" length="3" />
+    <elm name="PCR_PID" length="13" />
+    <elm name="resolution" length="8" />
+    <elm name="element_stream_count" length="8" />
+    <entry name="element_stream_info"  length="element_stream_count" >
+    	<elm name="stream_type" length="8" />
+    	<elm name="__reserved" length="3" />
+    	<elm name="elementary_PID" length="13" />
+    </entry>
+    <elm name="ca_descriptor_count" length="8" />
+    <entry name="ca_system_info"  length="ca_descriptor_count" >
+    	<elm name="CA_system_ID" length="16" />
+    	<elm name="__reserved" length="3" />
+    	<elm name="CA_PID" length="13" />
+    </entry>
+</descriptor>
+<descriptor name="program_linked_descriptor" value="0x87">
+	<elm name="linked_service_flag" length="8" />
+	<elm name="linked_service_text_length" length="8" />
+  	<entry name="linked_service_text"  length="linked_service_text_length" type="C" >
+  		<elm name="linked_service_text_char" length="8" />
+  	</entry>
+  	<elm name="button_type" length="8" />
+	<elm name="button_image_filename_length" length="8" />
+  	<entry name="button_image_filename"  length="button_image_filename_length" type="C" >
+  		<elm name="button_image_filename_char" length="8" />
+  	</entry>
+  	<elm name="display_start_time_MJD" length="16" />
+  	<elm name="display_start_time" length="24" />
+  	<elm name="display_end_time_MJD" length="16" />
+  	<elm name="display_end_time" length="24" />
+  	<elm name="c_menu" length="24" />
+  	<elm name="vas_itemid_length" length="8" />
+  	<entry name="vas_itemid"  length="vas_itemid_length" type="C" >
+  		<elm name="vas_itemid_char" length="8" />
+  	</entry>
+  	<elm name="vas_path_length" length="8" />
+  	<entry name="vas_path"  length="vas_path_length" type="C" >
+  		<elm name="vas_path_char" length="8" />
+  	</entry>
+  	<elm name="vas_serviceid_length" length="8" />
+  	<entry name="vas_serviceid"  length="vas_serviceid_length" type="C" >
+  		<elm name="vas_serviceid_char" length="8" />
+  	</entry>
+</descriptor>
+
+<descriptor name="product_list_descriptor" value="0x88">
+	<elm name="id_product_length" length="8" />
+  	<entry name="id_product"  length="id_product_length" type="C" >
+  		<elm name="id_product_char" length="8" />
+  	</entry>
+ 	<elm name="product_type" length="8" />
+  	<elm name="nm_product_length" length="8" />
+  	<entry name="nm_product"  length="nm_product_length" type="C" >
+  		<elm name="nm_product_char" length="8" />
+  	</entry>
+  	<elm name="desc_product_length" length="8" />
+  	<entry name="desc_product"  length="desc_product_length" type="C" >
+  		<elm name="desc_product_char" length="8" />
+  	</entry>
+  	<elm name="dt_product_start_MJD" length="16" />
+  	<elm name="dt_product_start" length="24" />
+  	<elm name="dt_product_end_MJD" length="16" />
+  	<elm name="dt_product_end" length="24" />
+  	<elm name="amt_price" length="24" />
+  	<elm name="amt_dc_incr" length="24" />
+  	<elm name="FG_term" length="8" />
+  	<elm name="FG_value" length="8" />
+</descriptor>
+
+<descriptor name="product_id_descriptor" value="0x89">
+	<elm name="id_product_count" length="8" />
+	<entry name="id_product_entry"  length="id_product_count" >
+		<elm name="id_product_length" length="8" />
+		<entry name="id_product"  length="id_product_length" type="C" >
+			<elm name="id_product_char" length="8" />
+		</entry>
+	</entry>
+</descriptor>
+
+<descriptor name="extended_service_descriptor" value="0x90">
+	<elm name="descriptor_number" length="4" />
+	<elm name="last_descriptor_number" length="4" />
+	<elm name="ISO_639_language_code" length="24" />
+	<elm name="length_of_items" length="8" />
+	<entry name="items"  length="length_of_items" >
+		<elm name="item_description_length" length="8" />
+		<entry name="item_descriptor"  length="item_description_length" type="C" >
+			<elm name="item_descriptor_char" length="8" />
+		</entry>
+		<elm name="item_length" length="8" />
+		<entry name="item"  length="item_length" type="C" >
+			<elm name="item_char" length="8" />
+		</entry>
+	</entry>
+	<elm name="text_length" length="8" />
+	<entry name="text"  length="text_length" type="C" >
+		<elm name="text_char" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="channel_image_descriptor" value="0x91">
+	<elm name="channel_image_length" length="8" />
+	<entry name="channel_image_url"  length="channel_image_length" type="C" >
+		<elm name="char" length="8" />
+	</entry>
+</descriptor>
+
+</descriptors>

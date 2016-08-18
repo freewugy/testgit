@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Table name="MGT">
+	<elm name="table_id" length="8" />
+	<elm name="section_syntax_indicator" length="1" />
+	<elm name="reserved_future_use" length="1" />
+	<elm name="reserved" length="2" />
+	<elm name="section_length" length="12" />
+	<elm name="table_id_extension" length="16" />
+	<elm name="reserved" length="2" />
+	<elm name="version_number" length="5" />
+	<elm name="current_next_indicator" length="1" />
+	<elm name="section_number" length="8" />
+	<elm name="last_section_number" length="8" />
+	<elm name="protocol_version" length="8" />
+	<elm name="tables_defined" length="16" />
+	<entry name="MGTEntry" length="tables_defined" >
+		<elm name="table_type" length="16" />
+		<elm name="reserved" length="3" />
+		<elm name="table_type_PID" length="13" />
+		<elm name="reserved" length="3" />
+		<elm name="table_type_version_number" length="5" />
+		<elm name="number_bytes" length="32" />
+		<elm name="reserved" length="4" />
+		<elm name="table_type_descriptors_length" length="12" />
+		<descriptors name="descriptor" length="table_type_descriptors_length" >
+		</descriptors>
+	</entry>
+	<elm name="reserved" length="4" />
+	<elm name="descriptors_length" length="12" />
+	<descriptors name="descriptor" length="descriptors_length" >
+	</descriptors>
+</Table>

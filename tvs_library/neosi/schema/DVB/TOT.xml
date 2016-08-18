@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Table name="TOT">
+	<elm name="table_id" length="8" />
+	<elm name="section_syntax_indicator" length="1" />
+	<elm name="reserved_future_use" length="1" />
+	<elm name="reserved" length="2" />
+	<elm name="section_length" length="12" />
+	<elm name="UTC_time" length="40" />
+	<elm name="reserved" length="4" />
+	<elm name="descriptors_loop_length" length="12" />
+	<descriptors name="descriptor" length="descriptors_loop_length" >
+	</descriptors>
+</Table>

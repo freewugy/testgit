@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Table name="RST">
+	<elm name="table_id" length="8" />
+	<elm name="section_syntax_indicator" length="1" />
+	<elm name="reserved_future_use" length="1" />
+	<elm name="reserved" length="2" />
+	<elm name="section_length" length="12" />
+	<entry name="RSTEntry" length="-1" >
+		<elm name="transport_stream_id" length="16" />
+		<elm name="original_network_id" length="16" />
+		<elm name="service_id" length="16" />
+		<elm name="event_id" length="16" />
+		<elm name="reserved_future_use" length="5" />
+		<elm name="running_status" length="3" />
+	</entry>
+</Table>

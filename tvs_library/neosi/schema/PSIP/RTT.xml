@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Table name="RTT">
+	<elm name="table_id" length="8" />
+	<elm name="section_syntax_indicator" length="1" />
+	<elm name="private_indicator" length="1" />
+	<elm name="reserved" length="2" />
+	<elm name="section_length" length="12" />
+	<elm name="table_id_extension" length="16" />
+	<elm name="reserved" length="2" />
+	<elm name="version_number" length="5" />
+	<elm name="current_next_indicator" length="1" />
+	<elm name="section_number" length="8" />
+	<elm name="last_section_number" length="8" />
+	<elm name="protocol_version" length="8" />
+	<elm name="rating_region_name_length" length="8" />
+	<entry name="rating_region_name_text" length="rating_region_name_length" >
+    	<elm name="text" length="8" />
+	</entry>
+	<elm name="dimensions_defined" length="8" />
+	<entry name="dimensions" length="dimensions_defined" >
+    	<elm name="dimension_name_length" length="8" />
+		<entry name="dimension_name_text" length="dimension_name_length" >
+    		<elm name="text" length="8" />
+		</entry>
+    	<elm name="reserved" length="3"  />
+    	<elm name="graduated_scale" length="1" />
+    	<elm name="values_defined" length="1" />
+		<entry name="values" length="values_defined" >
+    		<elm name="abbrev_rating_value_length" length="8" />
+			<entry name="abbrev_rating_value_text" length="abbrev_rating_value_length" >
+    			<elm name="text" length="8" />
+			</entry>
+    		<elm name="rating_value_length" length="8" />
+			<entry name="rating_value_text" length="rating_value_length" >
+    			<elm name="text" length="8" />
+			</entry>
+		</entry>
+	</entry>
+	<elm name="reserved" length="6" />
+	<elm name="descriptor_length" length="10" />
+	<descriptors name="descriptor" length="descriptor_length" >
+	</descriptors>
+</Table>

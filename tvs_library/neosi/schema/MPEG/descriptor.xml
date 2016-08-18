@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<descriptors>
+
+<descriptor name="Video_Stream_descriptor" value="0x02">
+    <elm name="multiple_frame_rate_flag" length="1" />
+    <elm name="frame_rate_code" length="4" />
+    <elm name="MPEG_1_only_flag" length="1" />
+    <elm name="constrained_parameter_flag" length="1" />
+    <elm name="still_picture_flag" length="1" />
+	<if name="MPEG_1_only_flag" condition="1">
+    	<elm name="profile_and_level_indication" length="8" />
+    	<elm name="chroma_format" length="2" />
+    	<elm name="frame_rate_extension_flag" length="1" />
+    	<elm name="reserved" length="5" />
+	</if>
+</descriptor>
+
+<descriptor name="Audio_Stream_descriptor" value="0x03">
+    <elm name="byte_data" length="8" />
+	<elm name="free_format_flag" length="1" /> 
+	<elm name="ID" length="1" /> 
+	<elm name="layer" length="2" /> 
+	<elm name="variable_rate_audio_indicator" length="1" /> 
+	<elm name="reserved" length="3" />
+</descriptor>
+
+<descriptor name="Hierarcy_descriptor" value="0x04">
+	<elm name="reserved" length="4" /> 
+	<elm name="hierarchy_type" length="4" />
+	<elm name="reserved" length="2" />
+	<elm name="hierarchy_layer_index" length="6" />
+	<elm name="reserved" length="2" />
+	<elm name="hierarchy_embedded_layer_index" length="6" />
+	<elm name="reserved" length="2" />
+	<elm name="hierarchy_channel" length="6" />
+</descriptor>
+
+<descriptor name="Registration_descriptor" value="0x05">
+    <elm name="format_identifier" length="32" />
+	<entry name="additional_identification_info" length="-1">
+    	<elm name="byte_data" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="Data_Stream_Alignment_descriptor" value="0x06">
+    <elm name="alignment_type" length="8" />
+</descriptor>
+
+<descriptor name="Target_Background_Grid_descriptor" value="0x07">
+	<elm name="horizontal_size" length="14" /> 
+	<elm name="vertical_size" length="14" /> 
+	<elm name="aspect_ratio_information" length="4" />
+</descriptor>
+
+<descriptor name="Video_window_descriptor" value="0x08">
+    <elm name="horizontal_offset" length="14" />
+    <elm name="vertical_offset" length="14" />
+    <elm name="window_priority" length="4" />
+</descriptor>
+
+<descriptor name="CA_descriptor" value="0x09">
+    <elm name="CA_system_id" length="16" />
+    <elm name="reserved" length="3" />
+    <elm name="CA_PID" length="13" />
+	<entry name="private_data" length="-1">
+    	<elm name="private_data_byte" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="ISO_639_language_descriptor" value="0x0a">
+	<entry name="ISO_639_language_entry" length="-1">
+    	<elm name="ISO_639_language_code" length="24" />
+    	<elm name="audio_type" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="System_clock_descriptor" value="0x0b">
+    <elm name="external_clock_reference_indicator" length="1" />
+    <elm name="reserved" length="1" />
+    <elm name="clock_accuracy_integer" length="6" />
+    <elm name="clock_accuracy_exponent" length="3" />
+    <elm name="reserved" length="5" />
+</descriptor>
+
+<descriptor name="Multiplex_buffer_utilization_descriptor" value="0x0c">
+    <elm name="bound_valid_flag" length="1" />
+    <elm name="LTW_offset_lower_bound" length="15" />
+    <elm name="reserved" length="1" />
+    <elm name="LTW_offset_upper_bound" length="15" />
+</descriptor>
+
+<descriptor name="Copyright_descriptor" value="0x0d">
+    <elm name="copyright_identifier" length="32" />
+	<entry name="additional_copyright_info" length="-1">
+    	<elm name="additional_copyrigth_info_byte" length="8" />
+	</entry>
+</descriptor>
+
+r<descriptor name="Maximum_bitrate_descriptor" value="0x0e">
+    <elm name="reserved" length="2" />
+    <elm name="maximum_bitrate" length="22" />
+</descriptor>
+
+<descriptor name="Private_data_indicator_descriptor" value="0x0f">
+    <elm name="private_data_indicator" length="32" />
+</descriptor>
+
+<descriptor name="Smoothing_buffer_descriptor" value="0x10">
+    <elm name="reserved" length="2" />
+    <elm name="sb_leak_rate" length="22" />
+    <elm name="reserved" length="2" />
+    <elm name="sb_size" length="22" />
+</descriptor>
+
+<descriptor name="System_Target_Decoder_descriptor" value="0x11">
+    <elm name="reserved" length="7" />
+    <elm name="leak_valid_flag" length="1" />
+</descriptor>
+
+<descriptor name="IBP_descriptor" value="0x12">
+    <elm name="closed_gop_flag" length="1" />
+    <elm name="identical_gop_flag" length="1" />
+    <elm name="max_gop_flag" length="14" />
+</descriptor>
+
+<descriptor name="MPEG-4_video_descriptor" value="0x1b">
+    <elm name="MPEG-4_visual_profile_and_level" length="8" />
+</descriptor>
+
+<descriptor name="MPEG-4_audio_descriptor" value="0x1c">
+    <elm name="MPEG-4_audio_profile_and_level" length="8" />
+</descriptor>
+
+<descriptor name="IOD_descriptor" value="0x1d">
+    <elm name="Scope_of_IOD_label" length="8" />
+    <elm name="IOD_label" length="8" />
+    <elm name="InitialObjectDescriptor" length="8" />
+</descriptor>
+
+<descriptor name="SL_descriptor" value="0x1e">
+    <elm name="ES_ID" length="8" />
+</descriptor>
+
+<descriptor name="FMC_descriptor" value="0x1f">
+	<entry name="FMC_entry" length="-1">
+    	<elm name="ES_ID" length="16" />
+    	<elm name="FlexMuxChannel" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="External_ES_ID_descriptor" value="0x20">
+    <elm name="External_ES_ID" length="16" />
+</descriptor>
+
+<descriptor name="MuxCode_descriptor" value="0x21">
+	<entry name="MuxCodeTable_entry" length="-1">
+    	<elm name="length" length="8" />
+    	<elm name="Mux_code" length="4" />
+    	<elm name="version" length="4" />
+    	<elm name="substructureCount" length="8" />
+    	<entry name="substructure_entry" length="substructureCount" />
+    		<elm name="slotCount" length="5" />
+    		<elm name="repetition_count" length="3" />
+    		<entry name="MuxCode_entry" length="repetition_count" />
+	    		<elm name="flexMuxChannel" length="8" />
+	    		<elm name="numberOfBytes" length="8" />
+			</entry>
+		</entry>
+	</entry>
+</descriptor>
+
+<descriptor name="FmxBufferSize_descriptor" value="0x22">
+	<entry name="FmxBufferSize_entry" length="-1">
+    	<elm name="byte_data" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="MultiplexBuffer_descriptor" value="0x23">
+    <elm name="MB_buffer_size" length="24" />
+    <elm name="TB_leak_rate" length="24" />
+</descriptor>
+
+</descriptors>

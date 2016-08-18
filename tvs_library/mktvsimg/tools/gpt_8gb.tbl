@@ -1,0 +1,14 @@
+fts,                16
+misc,               1
+boot,               8
+recovery,           32
+recovery_backup,    32
+factory_settings,   32
+splash,             10
+system,             900
+linknet_home,       500
+diagnostics,        32
+vendordata,         32
+security_storage,   1
+cache,              738
+userdata,           5120

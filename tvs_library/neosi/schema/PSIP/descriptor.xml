@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<descriptors>
+<descriptor name="audio_stream_descriptor" value="0x81">
+    <elm name="sample_rate_code" length="3" />
+    <elm name="bsid" length="5" />
+    <elm name="bit_rate_code" length="6" />
+    <elm name="surround_mode" length="2" />
+    <elm name="bsmod" length="3" />
+    <elm name="num_channels" length="4" />
+    <elm name="full_svc" length="1" />
+    <elm name="reserved" length="8" />
+	<if name="bsmod" condition="<2">
+    	<elm name="mainid" length="3" />
+    	<elm name="reserved" length="5" />
+	</if>
+	<else name="bsmod">
+    	<elm name="asvcflags" length="8" />
+	</else>
+</descriptor>
+
+<descriptor name="ATSC_private_information_descriptor" value="0xAD">
+    <elm name="format_identifier" length="32" />
+	<entry name="private_data" length="descriptor_length-4" >
+    	<elm name="private_data_byte" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="caption_service_descriptor" value="0xAD">
+    <elm name="reserved" length="3" />
+    <elm name="number_of_services" length="5" />
+	<entry name="caption_service_entry" length="number_of_services" >
+    	<elm name="language" length="24" />
+    	<elm name="cc_type" length="1" />
+    	<elm name="reserved" length="1" />
+		<if name="cc_type" condition="0">
+    		<elm name="reserved" length="5" />
+    		<elm name="line_21_field" length="1" />
+		</if>
+		<if name="cc_type" condition="1">
+    		<elm name="caption_service_number" length="6" />
+		</if>
+    	<elm name="easy_reader" length="1" />
+    	<elm name="wide_aspect_ratio" length="1" />
+    	<elm name="reserved" length="14" />
+	</entry>
+</descriptor>
+
+<descriptor name="component_name_descriptor" value="0xA3">
+    <entry name="component_name_string" length="-1" >
+    	<elm name="text" length="8" />
+    </entry>
+</descriptor>
+
+<descriptor name="content_advisory_descriptor" value="0x87">
+    <elm name="reserved" length="2" />
+    <elm name="rating_region_count" length="6" />
+	<entry name="rating_region_entry" length="rating_region_count" >
+    	<elm name="rating_region" length="8" />
+    	<elm name="rated_dimensions" length="8" />
+		<entry name="rated_dimensions_entry" length="rated_dimensions" >
+    		<elm name="rated_dimension_j" length="8" />
+    		<elm name="reserved" length="4" />
+    		<elm name="rating_value" length="4" />
+		</entry>
+    	<elm name="rating_descriptor_length" length="8" />
+    	<entry name="rating_descriptor_text" length="rating_descriptor_length" >
+    		<elm name="text" length="8" />
+    	</entry>
+	</entry>
+</descriptor>
+
+<descriptor name="extended_channel_name_descriptor" value="0xA0">
+    <entry name="long_channel_name_text" length="-1" >
+    	<elm name="text" length="8" />
+    </entry>
+</descriptor>
+
+<descriptor name="redistribution_control_descriptor" value="0xAA">
+</descriptor>
+
+<descriptor name="service_location_descriptor" value="0xA1">
+    <elm name="reserved" length="3" />
+    <elm name="PCR_PID" length="13" />
+    <elm name="number_elements" length="8" />
+    <entry name="element_stream_info"  length="number_elements" >
+    	<elm name="stream_type" length="8" />
+    	<elm name="reserved" length="3" />
+    	<elm name="elementary_PID" length="13" />
+    	<elm name="ISO_639_language_code" length="24" />
+    </entry>
+</descriptor>
+
+<descriptor name="time_shifted_service_descriptor" value="0xA2">
+    <elm name="reserved" length="3" />
+    <elm name="number_of_services" length="5" />
+    <entry name="time_shifted_service"  length="number_of_services" >
+    	<elm name="reserved" length="6" />
+    	<elm name="time_shift" length="10" />
+    	<elm name="reserved" length="4" />
+    	<elm name="major_channel_number" length="10" />
+    	<elm name="minor_channel_number" length="10" />
+    </entry>
+    <elm name="adaptation_field_data_identifier" length="8" />
+</descriptor>
+
+</descriptors>

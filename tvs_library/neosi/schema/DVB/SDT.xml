@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Table name="SDT">
+<!--
+	<elm name="table_id" length="8"/>
+	<elm name="section_syntax_indicator" length="1"/>
+	<elm name="reserved_future_use" length="1"/>
+	<elm name="reserved" length="2"/>
+	<elm name="section_length" length="12"/>
+-->	
+	<elm name="__skip" length="24" />
+	<elm name="transport_stream_id" length="16"/>
+<!--
+	<elm name="reserved" length="2"/>
+	<elm name="version_number" length="5"/>
+	<elm name="current_next_indicator" length="1"/>
+	<elm name="section_number" length="8"/>
+	<elm name="last_section_number" length="8"/>
+-->
+	<elm name="__skip" length="24" />
+	<elm name="original_network_id" length="16"/>
+	<elm name="__reserved_future_use" length="8"/>
+	<entry name="SDTEntry" length="-1">
+		<elm name="service_id" length="16"/>
+		<elm name="__reserved_future_use" length="6"/>
+		<elm name="EIT_Schedule_flag" length="1"/>
+		<elm name="EIT_present_following_flag" length="1"/>
+		<elm name="running_status" length="3"/>
+		<elm name="free_CA_mode" length="1"/>
+		<elm name="descriptors_loop_length" length="12"/>
+		<descriptors name="descriptor" length="descriptors_loop_length">
+		</descriptors>
+	</entry>
+</Table>

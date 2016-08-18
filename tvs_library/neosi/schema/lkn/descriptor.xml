@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<descriptors>
+
+<descriptor name="USER_defined_80_descriptor" value="0x80">
+	<entry name="USER_defined_80" length="-1" type="C" >
+    	<elm name="byte_data" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="USER_defined_81_descriptor" value="0x81">
+	<entry name="USER_defined_81" length="-1" type="C" >
+    	<elm name="byte_data" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="channel_descriptor" value="0x82">
+	<entry name="channel_entry" length="-1" >
+    	<elm name="service_id" length="16" />
+    	<elm name="channel_number" length="16" />
+	</entry>
+</descriptor>
+
+<descriptor name="logical_channel_descriptor" value="0x83">
+	<entry name="logical_channel_entry" length="-1" >
+    	<elm name="service_id" length="16" />
+    	<elm name="visible_service_flag" length="1" />
+    	<elm name="reserved" length="1" />
+    	<elm name="logical_channel_number" length="14" />
+	</entry>
+</descriptor>
+
+<descriptor name="USER_defined_84_descriptor" value="0x84">
+	<entry name="USER_defined_84" length="-1" type="C" >
+    	<elm name="byte_data" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="nasp_blackout_descriptor" value="0x85">
+	<entry name="nasp_blackout" length="-1" type="C" >
+    	<elm name="private_data" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="nasp_ca_descriptor" value="0x86">
+	<entry name="nasp_ca" length="-1" type="C" >
+    	<elm name="private_data" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="nasp_ppv_descriptor" value="0x87">
+	<elm name="private_data" length="32" />
+	<elm name="ppv_cost" length="16" />
+	<elm name="free_access_time" length="8" />
+	<entry name="nasp_ppv" length="-1" type="C" >
+    	<elm name="private_data" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="USER_defined_88_descriptor" value="0x88">
+	<entry name="USER_defined_88" length="-1" type="C" >
+    	<elm name="byte_data" length="8" />
+	</entry>
+</descriptor>
+
+<descriptor name="USER_defined_89_descriptor" value="0x89">
+	<entry name="USER_defined_89" length="-1" type="C" >
+    	<elm name="byte_data" length="8" />
+	</entry>
+</descriptor>
+
+</descriptors>

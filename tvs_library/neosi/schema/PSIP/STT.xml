@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Table name="STT">
+	<elm name="table_id" length="8" />
+	<elm name="section_syntax_indicator" length="1" />
+	<elm name="private_indicator" length="1" />
+	<elm name="reserved" length="2" />
+	<elm name="section_length" length="12" />
+	<elm name="table_id_extension" length="16" />
+	<elm name="reserved" length="2" />
+	<elm name="version_number" length="5" />
+	<elm name="current_next_indicator" length="1" />
+	<elm name="section_number" length="8" />
+	<elm name="last_section_number" length="8" />
+	<elm name="protocol_version" length="8" />
+	<elm name="system_time" length="32" />
+	<elm name="GPS_UTC_offset" length="8" />
+	<elm name="DS_status" length="1" />
+	<elm name="reserved" length="2" />
+	<elm name="DS_day_of_month" length="5" />
+	<elm name="DS_hour" length="8" />
+	<descriptors name="descriptor" length="-1" >
+	</descriptors>
+</Table>

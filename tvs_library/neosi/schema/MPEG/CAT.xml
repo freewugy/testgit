@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<table name="cat">
+	<elm name="table_id" length="8" />
+	<elm name="section_syntax_indicator" length="1"/>
+	<elm name="reserved_future_use" length="1" />
+	<elm name="reserved" length="2" />
+	<elm name="section_length" length="12" />
+	<elm name="reserved" length="18" />
+	<elm name="version_number" length="5" />
+	<elm name="current_next_indicator" length="1" />
+	<elm name="section_number" length="8" />
+	<elm name="last_section_number" length="8"/>
+	<descriptors name="descriptor" length="-1">
+	</descriptors>
+</table>
